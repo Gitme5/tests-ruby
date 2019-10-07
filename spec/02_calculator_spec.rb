@@ -12,12 +12,30 @@ describe "add" do
   it "adds positive numbers" do
     expect(add(2,6)).to eq(8)
   end
+
+  it "adds negative numbers" do
+    expect(add(-2,-6)).to eq(-8)
+  end
+
+  it "adds positive and negative numbers" do
+    expect(add(-2,6)).to eq(4)
+  end
+
 end
 
-describe "subtract" do
-  it "subtracts numbers" do
-    expect(subtract(10,4)).to eq(6)
+describe "substract" do
+  it "substracts numbers" do
+    expect(substract(10,4)).to eq(6)
   end
+
+  it "substracts negative numbers" do
+    expect(substract(-10,-4)).to eq(-6)
+  end
+
+  it "substracts positive and negative numbers" do
+    expect(substract(10,-4)).to eq(14)
+  end
+
 end
 
 describe "sum" do
@@ -47,23 +65,56 @@ describe "#multiply" do
     expect(multiply(3, 4)).to eq(12)
   end
 
-  it "multiplies two other numbers"
+  it "multiplies two other numbers" do
     # one other test here, don't forget do end ;)
+    expect(multiply(-3, 4)).to eq(-12)
+  end
 
-  it "multiplies two other numbers, one of them being 0"
+  it "multiplies two other numbers, one of them being 0" do
     # one last test, with 0 in it
+    expect(multiply(0, 4)).to eq(0)
+  end
 
 end
 
 describe "#power" do
-  it "raises one number to the power of another number"
+  it "raises one number to the power of another number" do
+    expect(power(0, 4)).to eq(0)
+  end
+
+  it "raises one number to the power of another number" do
+    expect(power(0, 4)).to eq(0)
+  end
+
+  it "raises one number to the power of another number" do
+    expect(power(4, -1)).to eq(1/4)
+  end
 end
 
 # http://en.wikipedia.org/wiki/Factorial
 describe "#factorial" do
-  it "computes the factorial of 0"
-  it "computes the factorial of 1"
-  it "computes the factorial of 2"
-  it "computes the factorial of 5"
-  it "computes the factorial of 10"
+  it "computes the factorial of 0" do
+    expect(factorial(0)).to eq(1)
+  end
+
+  it "computes the factorial of 1" do
+    expect(factorial(1)).to eq(1)
+  end
+
+  it "computes the factorial of 2" do
+    expect(factorial(2)).to eq(2)
+  end
+
+  it "computes the factorial of 5" do
+    expect(factorial(5)).to eq(120)
+  end
+
+  it "computes the factorial of 10" do
+    expect(factorial(10)).to eq(3628800)
+  end
+
+  it "computes the factorial of -2" do
+    expect(factorial(-2)).to eq(nil)
+  end
+
 end
