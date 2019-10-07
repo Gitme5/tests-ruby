@@ -1,14 +1,5 @@
-def time_string(a)
+def time_string(sec)
 	
-
-	hours = a/3600
-	minutes = (a-a%3600)/60
-	seconds = (a%3600)%60/60
-
-	puts hours
-	puts minutes
-	puts seconds
+	return [sec / 3600, sec / 60 % 60, sec % 60].map{|t| t.to_s.rjust(2,'0')}.join(':')
 
 end
-
-time_string(4000)
