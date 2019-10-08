@@ -1,3 +1,4 @@
+#Thanks to Julien Du for his help
 def translate_word(w)
 
 	vowel = ["a","e","i","o","u"]
